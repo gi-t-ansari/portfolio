@@ -191,7 +191,13 @@
     cursor: pointer;
     /* border: 1px solid #ababab; */
     box-shadow: 0px 0px 5px #cbd5e1;
+    transition: transform 0.5s;
 }
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
 
 .tech-stack span {
     transition: color 0.5s;
@@ -199,6 +205,7 @@
 
 .card:hover .card-body .tech-stack span {
     color: var(--color-primary);
+    
     
 }
 
