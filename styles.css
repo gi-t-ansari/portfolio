@@ -489,14 +489,9 @@ nav .fa-solid {
         text-align: left;
     }
 
-    /* .tab-contents ul {
-        display: block;
+    .tab-contents ul {
+        gap: 20px;
     }
-
-    .tab-contents ul li {
-        display: block;
-        text-align: left;
-    } */
 
     .tab-links {
         display: block;
