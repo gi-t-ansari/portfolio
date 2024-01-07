@@ -33,7 +33,7 @@
  }
 
  .container h1{
-    font-size: 40px;
+    font-size: 60px;
  }
 
  .container h1 span {
@@ -145,6 +145,7 @@
  .row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
  }
 
@@ -187,24 +188,33 @@
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+    /* border: 1px solid #ababab; */
+    box-shadow: 0px 0px 5px #cbd5e1;
 }
 
-.card-heading {
-    font-size: 18px;
-    /* position: absolute; */
-    text-align: center;
-    letter-spacing: 2px;
-    padding-bottom: 10px;
+.tech-stack span {
+    transition: color 0.5s;
+}
+
+.card:hover .card-body .tech-stack span {
+    color: var(--color-primary);
+    
 }
 
 .card-description {
     font-size: 14px;
-    margin-bottom: 5px;
+    margin: 20px 0;
+}
+
+.card-description span {
+    color: var(--color-primary);
+    font-weight: 600;
 }
 
 .tech-stack {
-    font-size: 15px;
-    margin-bottom: 5px;
+    font-size: 12px;
+    margin-bottom: 20px;
 }
 
 .card-links{
@@ -223,7 +233,6 @@
     min-width: 49%;
     border: 1px solid var(--color-primary);
     border-radius: 5px;
-    margin-top: 10px;
     transition: background 0.5s;
 }
 
@@ -231,6 +240,32 @@
     background: var(--color-primary);
     font-weight: 600;
 
+}
+
+#card1 {
+    background-image: url(./Files/qtify.png);
+    
+}
+
+#card2 {
+    background-image: url(./Files/qkart.png);
+}
+
+#card3 {
+    background-image: url(./Files/xboard.png);
+}
+
+#card4 {
+    background-image: url(/Files/qtrip.png);
+}
+
+#card1,
+#card2,
+#card3,
+#card4 {
+    height: 250px;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
 }
 
 
@@ -319,10 +354,6 @@
     flex-basis: 60%;
 }
 
-.contact-left p{
-
-}
-
 .contact-left p i {
     color: var(--color-primary);
     font-size: 20px;
@@ -402,6 +433,9 @@ nav .fa-solid {
 
 @media only screen  and (max-width: 768px){
     
+    .container h1 {
+        font-size: 35px;
+    }
 
     .intro {
         margin-top: 20%;
@@ -469,6 +503,7 @@ nav .fa-solid {
 
     .about-col-1 {
         margin-bottom: 30px;
+        margin-top: 0;
     }
 
     .about-col-2 {
@@ -502,6 +537,10 @@ nav .fa-solid {
     .contact-left, .contact-right {
         flex-basis: 100%;
         text-align: left;
+    }
+
+    .contact-left p{
+        font-size: 14px;
     }
 
     .footer {
