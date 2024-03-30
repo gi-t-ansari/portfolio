@@ -225,9 +225,12 @@
 }
 
 .card-links{
+    position: sticky;
+    bottom: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    
 }
 
 .card-link {
@@ -263,7 +266,7 @@
 }
 
 #card4 {
-    background-image: url(/Files/qtrip.png);
+    background-image: url(/Files/ledgerEase.jpeg);
 }
 
 #card1,
