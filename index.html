@@ -229,7 +229,10 @@
                 </li>
                 <li>
                   <span
-                    ><img width="50" src="./Files/materialTailwind.png" alt="mui" /></span
+                    ><img
+                      width="50"
+                      src="./Files/materialTailwind.png"
+                      alt="mui" /></span
                   ><br />Material Tailwind
                 </li>
                 <li>
@@ -244,7 +247,10 @@
                 </li>
                 <li>
                   <span
-                    ><img width="50" src="./Files/tailwindcss.png" alt="mui" /></span
+                    ><img
+                      width="50"
+                      src="./Files/tailwindcss.png"
+                      alt="mui" /></span
                   ><br />Tailwind CSS
                 </li>
                 <li>
@@ -333,7 +339,9 @@
                   rows="6"
                   placeholder="Your Message"
                 ></textarea>
-                <button type="submit" class="submit-btn">Submit</button>
+                <button type="submit" class="submit-btn" id="btn-text">
+                  Send
+                </button>
               </form>
               <span id="msg"></span>
             </div>
@@ -354,12 +362,19 @@
         "https://script.google.com/macros/s/AKfycbybDkMAWnDdMBx3MOAiR1TkilX-N_6ETdVe_MJTjUcmHp5UK5nTXFPJ2pufDJ5h7f2oKw/exec";
       const form = document.forms["submit-to-google-sheet"];
       const msg = document.getElementById("msg");
+      const btn = document.getElementById("btn-text");
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
+        btn.innerText = "Sending...";
+        btn.style.backgroundColor = "#b54769";
+        btn.style.cursor = "default";
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
             form.reset();
+            btn.innerText = "Send";
+            btn.style.backgroundColor = "#ff004f";
+            btn.style.cursor = "default";
             msg.innerText = "Message sent successfully";
             setTimeout(() => {
               msg.innerText = "";
